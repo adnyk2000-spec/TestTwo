@@ -30,29 +30,30 @@ body {
 }
 
 .container .logo {
-  display: inline-block;
   cursor: pointer;
 }
 
 .searchbar {
-  width: -10%;
-  text-align: end;
+  position: relative;
+  width: 160px;
 }
 
 .searchbar input {
+  width: 100%;
   background-color: #fafafa;
-  padding: 5px;
-  text-indent: 21px;
-  outline: none;
+  padding: 5px 8px 5px 28px;
+  
   border: 1px solid rgb(218, 217, 217);
   border-radius: 2px;
-  color: rgb(77, 77, 77);
 }
 
 .searchbar img {
   position: absolute;
-  margin-left: -10.5rem;
-  margin-top: 0.25rem;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
 }
 
 .searchbar input::placeholder {
@@ -65,33 +66,17 @@ body {
   color: rgb(172, 172, 172);
 }
 
-.nav-group .nav-item {
-  list-style-type: none;
-  margin: 0 8px;
-}
 
-.nav-group .nav-item a {
-  font-size: 22px;
-  display: block;
-  color: black;
-}
 
-.nav-group {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+
 
 .action .profile {
-  position: relative;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+ 
 }
 
 .action .profile img {
@@ -116,7 +101,7 @@ main .container {
   justify-content: space-between;
 }
 
-.col-9 {
+.main-feed {
   width: 65%;
   margin-top: 30px;
 }
@@ -129,15 +114,15 @@ main .container {
   align-items: center;
   justify-content: start;
   padding: 20px 0;
-  border-radius: 2px;
+  
   border: 1px solid rgb(218, 217, 217);
   overflow: auto;
 }
 
 .statuses .status {
-  display: inline-block;
+
   border-radius: 50%;
-  overflow: auto;
+ 
   width: 70px;
   height: 70px;
   min-width: 70px;
@@ -149,15 +134,12 @@ main .container {
 }
 
 .statuses .status .image {
-  position: relative;
+  
   width: 100%;
   height: 100%;
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border: 2px solid white;
 }
 
@@ -167,82 +149,72 @@ main .container {
   object-fit: cover;
 }
 
-.col-3 {
+.sidebar {
   width: 33%;
 
   position: sticky;
   top: 90px;
 }
 
-.col-3 h4 {
+.sidebar h4 {
   color: rgb(100, 100, 100);
 }
 
-.col-3 .card {
-  margin-bottom: 20px;
-  position: relative;
-  width: 100%;
-  /* min-height: 400px; */
-  display: inline-block;
-}
 
-.col-3 .card .top {
+.sidebar .card .top {
   padding: 10px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.col-3 .card .top a {
+.sidebar .card .top a {
   color: #1d92ff;
 }
 
-.col-3 .card .bottom {
+.sidebar .card .bottom {
   padding: 10px 20px;
 }
 
-.col-3 .card .top .userDetails {
+.sidebar .card .top .userDetails {
   width: 100%;
   display: flex;
   align-items: center;
 }
 
-.col-3 .card .top .userDetails h3 {
+.sidebar .card .top .userDetails h3 {
   font-size: 16px;
   color: #4d4d4f;
   font-weight: 500;
   line-height: 1em;
 }
 
-.col-3 .card .top .userDetails h3 span {
+.sidebar .card .top .userDetails h3 span {
   font-size: 0.75em;
 }
 
-.col-3 .card .top .userDetails h3 span {
+.sidebar .card .top .userDetails h3 span {
   font-size: 0.75em;
 }
 
-.col-9 .card {
+.main-feed .card {
   margin-bottom: 20px;
   position: relative;
   width: 100%;
-  display: inline-block;
   border: 1px solid rgba(7, 7, 7, 0.24);
 }
 
-.col-9 .card .top {
+.main-feed .card .top {
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
-.col-9 .card .bottom {
+.main-feed .card .bottom {
   padding: 10px 20px;
 }
 
-.col-9 .card .top .userDetails {
-  width: 100%;
+.main-feed .card .top .userDetails {
   display: flex;
   align-items: center;
 }
@@ -253,9 +225,6 @@ main .container {
 }
 
 .profilepic .profile_img {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   border-radius: 50%;
   overflow: hidden;
   width: 30px;
@@ -287,14 +256,12 @@ main .container {
 
 .cover {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.col-9 .card .top .userDetails h3 {
+.main-feed .card .top .userDetails h3 {
   /* width: 100%; */
   font-size: 16px;
   color: #4d4d4f;
@@ -302,11 +269,11 @@ main .container {
   line-height: 1em;
 }
 
-.col-9 .card .top .userDetails h3 span {
+.main-feed .card .top .userDetails h3 span {
   font-size: 0.75em;
 }
 
-.col-9 .card .top .userDetails h3 span {
+.main-feed .card .top .userDetails h3 span {
   font-size: 0.75em;
 }
 
